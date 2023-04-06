@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="0406.cpp" />
     <ClCompile Include="Goblin.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Slime.cpp" />
     <ClCompile Include="Wildboar.cpp" />
