@@ -2,19 +2,30 @@
 
 using namespace std;
 
-class Gmae
+class Player
 {
 public:
 	int HP, MP;
 	float Attack;
+};
 
-	int Player()
+class Monster
+{
+public:
+	int HP, MP;
+	float Attack;
+	
+	int Slime()
 	{
-
+		
 	}
-	int Monster()
+	int Goblin()
 	{
-		int Slime, Goblin, Wildboar;
+		
+	}
+	int Wildboar()
+	{
+		
 	}
 
 };
