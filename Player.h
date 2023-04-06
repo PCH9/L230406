@@ -1,12 +1,8 @@
 #pragma once
-class FPlayer
+#include "Character.h"
+
+class FPlayer : public FCharacter
 {
 public:
-	int HP;
-	int MP;
-
-	//methed, member function
-	void Move();
-	void Attack();
 };
 
