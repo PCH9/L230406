@@ -2,22 +2,49 @@
 #include "Player.h"
 #include "Goblin.h"
 #include "Slime.h"
+#include "Wildboar.h"
+#include <ctime>
+#include <vector>
 
 using namespace std;
 
 int main()
 {
-	FPlayer* Player = new FPlayer();
-	FGoblin* Goblin = new FGoblin();
-	FSlime* Slime = new FSlime();
+	srand((unsigned int)time(nullptr));
 
-	Player->Move();
-	Goblin->Move();
-	Slime->Move();
+	vector<FCharacter*> Characters;
 
-	delete Player;
-	delete Goblin;
-	delete Slime;
+	Characters.push_back(new FPlayer());
+
+	int Count = (rand() % 3) + 1;
+	for (int i = 0; i < Count; ++i)
+	{
+		Characters.push_back(new FGoblin());
+	}
+	Count = (rand() % 3) + 1;
+	for (int i = 0; i < Count; ++i)
+	{
+		Characters.push_back(new FSlime());
+	}
+	Count = (rand() % 3) + 1;
+	for (int i = 0; i < Count; ++i)
+	{
+		Characters.push_back(new FWildboar());
+	}
+
+	while (1)
+	{
+		for (int i = 0; i < Characters.size(); ++i)
+		{
+			Characters[i]->Move();
+		}
+	}
+
+	for (int i = 0; i < Characters.size(); ++i)
+	{
+		delete Characters[i];
+	}
+	
 
 	return 0;
 }
